@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Einstein Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .error-message {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Albert Einstein Quiz</h1>
+        </header>
+
+        <section class="quiz">
+            <h2>Quiz</h2>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. What is Albert Einstein best known for?</p>
+                    <input type="radio" id="q1a1" name="q1" value="a">
+                    <label for="q1a1">Theory of Relativity</label><br>
+                    <input type="radio" id="q1a2" name="q1" value="b">
+                    <label for="q1a2">Quantum Mechanics</label><br>
+                    <input type="radio" id="q1a3" name="q1" value="c">
+                    <label for="q1a3">Philosophy of Science</label><br>
+                </div>
+                <div class="question">
+                    <p>2. In which year did Albert Einstein win the Nobel Prize in Physics?</p>
+                    <input type="radio" id="q2a1" name="q2" value="a">
+                    <label for="q2a1">1905</label><br>
+                    <input type="radio" id="q2a2" name="q2" value="b">
+                    <label for="q2a2">1921</label><br>
+                    <input type="radio" id="q2a3" name="q2" value="c">
+                    <label for="q2a3">1939</label><br>
+                </div>
+                <div class="question">
+                    <p>3. How many scientific papers did Albert Einstein publish?</p>
+                    <input type="radio" id="q3a1" name="q3" value="a">
+                    <label for="q3a1">100</label><br>
+                    <input type="radio" id="q3a2" name="q3" value="b">
+                    <label for="q3a2">200</label><br>
+                    <input type="radio" id="q3a3" name="q3" value="c">
+                    <label for="q3a3">300</label><br>
+                </div>
+                <input type="submit" value="Submit">
+                <p class="error-message" id="errorMessage">Some answers were incorrect. Please try again.</p>
+            </form>
+        </section>
+
+        <footer>
+            <p>Anyone who has never made a mistake has never tried anything new</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+
+            const correctAnswers = {
+                q1: 'a', // Theory of Relativity
+                q2: 'b', // 1921
+                q3: 'c'  // 300
+            };
+
+            if (q1 && q2 && q3) {
+                if (q1.value === correctAnswers.q1 && q2.value === correctAnswers.q2 && q3.value === correctAnswers.q3) {
+                    window.location.href = 'congratulations.html';
+                } else {
+                    document.getElementById('errorMessage').style.display = 'block';
+                }
+            } else {
+                alert('Please answer all the questions.');
+            }
+        });
+    </script>
+</body>
+</html>

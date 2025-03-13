@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #88d2e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 10px auto;
+    padding: 50px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #e4eaeb;
+    color: rgb(62, 55, 140);
+}
+
+header h1, header p {
+    color: rgb(31, 7, 246); /* Dark blue-grey color */
+}
+
+header p {
+    color: rgb(31, 7, 246); /* Change the color of the text to white */
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0;
+}
+
+.profile-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(135, 195, 13, 0.36);
+    margin-top: 2em; 
+}
+
+h2 {
+    color: rgb(31, 7, 246);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 img {
+    margin-left: 10px; /* Adjust the space between the text and the image */
+    width: 30px; /* Adjust the width as needed */
+    height: auto;
+}
+
+p {
+    line-height: 1.6;
+    color: #333333;
+    text-align: center; /* Center the text */
+}
+
+.achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievement-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between the image and the text */
+}
+
+.achievements ul {
+    list-style-type: square;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.achievements ul li {
+    margin-bottom: 1em; 
+}
+
+.achievement-image {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-left: 10px; /* Adjust the space between the text and the image */
+}
+
+.nobel-image {
+    width: 70px; /* Adjust the width as needed */
+    height: auto;
+    margin-left: 10px; /* Adjust the space between the text and the image */
+}
+
+.quiz {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.quiz h2 {
+    color: #8fa85d;
+}
+
+.quiz .question {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center; 
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #8fa85d;
+    color: #5C4033; /* Change the color of the text to dark brown */
+    font-style: italic; /* Make the text italic */
+    font-family: 'Times New Roman', Times, serif; /* Use a classical font */
+    font-size: x-large;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #5C4033; /* Change the color of the text to dark brown */
+}

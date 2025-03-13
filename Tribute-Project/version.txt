@@ -1,0 +1,7 @@
+=========================
+This page appears at the end of the course and identifies 
+the release level of the course
+=========================
+Version information for course: WA3411
+CVS Release tag: REL_1_0
+Release date: November 20 2023

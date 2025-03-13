@@ -1,0 +1,175 @@
+/* CSS Reset */
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+/* Style the header with a background color, padding, and flexbox layout */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the navigation bar inside the header */
+header nav {
+    display: flex;
+}
+
+/* Style the navigation links */
+header nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Change the color of navigation links on hover */
+header nav a:hover {
+    color: #ff6347; /* Tomato color on hover */
+}
+
+/* About Me Section */
+/* Style the About Me section with padding on the left and right, and center-aligned text */
+#about-me {
+    padding: 0 32rem; /* Padding only on the left and right */
+    text-align: center;
+}
+
+/* Style the profile picture in the About Me section */
+#about-me img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Increase the font size of the brief bio in the About Me section */
+#about-me p {
+    font-size: 1.2rem; /* Increase font size */
+}
+
+/* Skills Section */
+/* Style the Skills section with padding and flexbox layout */
+#skills {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style individual skill items */
+#skills .skill {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Increase font size */
+}
+
+/* Projects Section */
+/* Style the Projects section with padding and flexbox layout */
+#projects {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style individual project cards */
+#projects .project-card {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Add hover effect to project cards */
+#projects .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style images inside project cards */
+#projects .project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Style paragraphs inside project cards */
+#projects .project-card p {
+    margin-top: 0.5rem;
+}
+
+/* Contact Section */
+/* Style the Contact section with padding and center-aligned text */
+#contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Style the contact form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style input fields and textarea in the contact form */
+#contact form input,
+#contact form textarea {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the submit button in the contact form */
+#contact form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Change the background color of the submit button on hover */
+#contact form button:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    /* Stack navigation links vertically on smaller screens */
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Stack skill items vertically on smaller screens */
+    #skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Stack project cards vertically on smaller screens */
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+}
