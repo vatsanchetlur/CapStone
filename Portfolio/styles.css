@@ -44,6 +44,7 @@ header nav a:hover {
 
 /* Style the profile picture in the About Me section */
 #about-me img {
+    border-radius: 0;
     width: 150px; 
     height: auto; 
     object-fit: cover;
