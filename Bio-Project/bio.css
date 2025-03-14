@@ -92,9 +92,21 @@ footer {
 }
 
 /* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .bio {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding: 10px;
+    }
+
+    .bio {
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .social-media {
@@ -116,6 +128,11 @@ footer {
 
     h1 {
         font-size: 1.5em;
+    }
+
+    .bio {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .social-icon {
