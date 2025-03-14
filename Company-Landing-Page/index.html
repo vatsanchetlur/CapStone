@@ -3,173 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmic Tech Solutions | Innovating Your Digital Universe</title>
-    <link rel="icon" href="cosmic.jpeg" type="image/jpeg">
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- Custom Styles -->
+    <title>Bootstrap Navbar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #ffffff;
+        /* CSS Reset */
+        * {
             margin: 0;
-            background-color: #0e1a4d; 
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
         header {
-            position: relative;
+            background-color: #007bff; /* Bootstrap primary color */
+            padding: 15px 0;
         }
+
         .navbar {
-            background-color: #1a1a3d; 
-        }
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: #ffffff; 
+            display: flex; /* Create Flex container */
+            justify-content: space-between; /* Space between brand and navigation */
+            align-items: center; /* Align items vertically center */
+            flex-wrap: wrap; /* Allow wrapping for responsiveness */
         }
 
-        .navbar-nav .nav-link.active {
-            color: #ffffff; /* White color */
+        .navbar .navbar-nav {
+            display: flex; /* Create Flex container for nav items */
+            flex-wrap: wrap; /* Allow wrapping for small screens */
         }
 
-        .navbar-nav .nav-link {
-            color: #ffcc00; 
+        .navbar .navbar-nav .nav-link {
+            color: white !important; /* White links */
+            margin: 0 15px; /* Adjust margin for spacing */
         }
-        .navbar-nav .nav-link:hover {
-            color: #ffffff; 
+
+        /* Hero Section Styling */
+        .hero {
+            background-color: #f8f9fa;
+            padding: 100px 0;
+            text-align: center;
         }
-        .cosmic {
-        background-image: url('cosmic.jpeg'); /* Background image */
-        background-size: cover;
-        background-position: center;
-        color: #f0f0f0;
-        padding: 100px 0;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
-    .cosmic::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-        z-index: -1;
-    }
+
+        /* About Section Styling */
+        .about {
+            background-color: #f1f1f1;
+            padding: 50px 0;
+            text-align: center;
         }
-        .services, .about {
-            padding: 60px 0;
-            background-color: #1a1a2e; /* Slightly lighter than navbar */
+
+        .profile-pic {
+            width: 150px; /* Circular profile picture */
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px 0;
         }
-        .card {
-            border: none;
-            border-radius: 10px;
+
+        /* Skills Section */
+        .skills {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .skills-container {
+            display: flex; /* Create Flex container */
+            flex-wrap: wrap; /* Allow skills to wrap */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        .skill {
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 5px;
+            flex: 1 1 150px; /* Allow skills to grow, shrink, and set a base width */
+            min-width: 120px; /* Minimum width for responsiveness */
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 50px 0;
+        }
+
+        .projects-container {
+            display: flex; /* Create Flex container */
+            flex-wrap: wrap; /* Allow wrapping of project cards */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        .project-card {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(255, 204, 0, 0.5); /* Yellow shadow for cards */
+            margin: 15px;
+            background-color: #fff;
+            flex: 1 1 300px; /* Allow cards to grow and shrink, set base width */
+            max-width: 300px; /* Prevent cards from exceeding width */
         }
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #ffcc00;
+
+        .project-card img {
+            width: 100%; /* Responsive image */
+            height: auto;
         }
+
+        .project-card-body {
+            padding: 15px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 0;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column; /* Vertical alignment */
+            max-width: 500px; /* Center the form */
+            margin: 0 auto; /* Center the form */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3; /* Darker shade for hover */
+        }
+
+        /* Footer Styling */
         footer {
-            background-color: #2e2e3e;
-            color: #f0f0f0;
-            padding: 30px 0;
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
         }
-        footer a {
-            color: #ffcc00; /* Bright yellow for links */
-            text-decoration: none;
+
+        footer h5 {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="#">Your One Stop Tech Hub</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#cosmic">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services" style="color: #ffffff;">Our Solutions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about" style="color: #ffffff;">About Us</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+           button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
 
-<main>
-    <section id="cosmic" class="cosmic d-flex align-items-center">
-        <div class="container">
-            <h1 class="display-4">Welcome to Cosmic Tech Solutions</h1>
-            <p class="lead">Innovating Your Digital Universe with Cutting-Edge Technology.</p>
-            <a href="#" class="btn btn-light btn-lg">Launch Your Project</a>
+    <section class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>This is a simple hero section.</p>
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        <p>This is the about section.</p>
+    </section>
+
+    <section class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Bootstrap</div>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="text-center mb-4">Our Solutions</h2>
-            <div class="row text-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Custom Software Development</h5>
-                            <p class="card-text">Tailored software solutions to meet your unique business needs. We develop applications that drive innovation.</p>
-                            <a href="#" class="btn btn-primary">Discover More</a>
-                        </div>
-                    </div>
+    <section class="projects">
+        <h2>My Projects</h2>
+       -container">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <div class="project-card-body">
+                    <h5>Project 1</h5>
+                    <p>Description of project 1.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Cloud Solutions</h5>
-                            <p class="card-text">Leverage the power of the cloud for scalable, secure, and efficient IT infrastructure. Elevate your business to the next level.</p>
-                            <a href="#" class="btn btn-primary">Explore Services</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Cybersecurity Consulting</h5>
-                            <p class="card-text">Protect your digital assets with our comprehensive cybersecurity solutions. Stay safe in an ever-evolving threat landscape.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <div class="project-card-body">
+                    <h5>Project 2</h5>
+                    <p>Description of project 2.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="text-center mb-4">About Cosmic Tech Solutions</h2>
-            <p>Founded in 2015, Cosmic Tech Solutions has been at the forefront of technology innovation, helping businesses navigate the digital landscape. Our team of tech enthusiasts and experts are passionate about crafting solutions that not only meet the demands of today but also anticipate the needs of tomorrow. Whether it’s software development, cloud computing, or cybersecurity, we provide the expertise and support necessary to launch your organization into the future.</p>
-        </div>
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
-</main>
 
-<footer class="text-center">
-    <div class="container">
-        <p>&copy; 2025 Cosmic Tech Solutions. All rights reserved.</p>
-        <p>Contact us: <a href="mailto:info@cosmictechsolutions.com">info@cosmictechsolutions.com</a></p>
-    </div>
-</footer>
+    <footer>
+        <h5>Footer</h5>
+        <p>Some footer content here.</p>
+    </footer>
 
-<!-- Bootstrap Bundle with Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
