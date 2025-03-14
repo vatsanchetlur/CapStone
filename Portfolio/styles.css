@@ -154,6 +154,12 @@ header nav a:hover {
 
 /* Responsive Design */
 /* Adjust layout for smaller screens */
+@media (max-width: 1024px) {
+    #about-me {
+        padding: 0 16rem; /* Reduce padding on larger tablets */
+    }
+}
+
 @media (max-width: 768px) {
     /* Stack navigation links vertically on smaller screens */
     header nav {
@@ -171,5 +177,31 @@ header nav a:hover {
     #projects {
         flex-direction: column;
         align-items: center;
+    }
+
+    #about-me {
+        padding: 0 8rem; /* Reduce padding on smaller tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #about-me {
+        padding: 0 2rem; /* Reduce padding on mobile devices */
+    }
+
+    #about-me img {
+        width: 100px; /* Reduce profile image size on mobile devices */
+    }
+
+    #about-me p {
+        font-size: 1rem; /* Reduce font size on mobile devices */
+    }
+
+    #skills .skill {
+        font-size: 1rem; /* Reduce font size on mobile devices */
+    }
+
+    #projects .project-card {
+        width: 100%; /* Make project cards full width on mobile devices */
     }
 }
